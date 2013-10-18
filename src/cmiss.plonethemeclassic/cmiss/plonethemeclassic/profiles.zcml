@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="cmiss.plonethemeclassic">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="CMISS Plone Theme Classic"
+      directory="profiles/default"
+      description="Customizations to the classic plone theme that drive the CMISS site."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

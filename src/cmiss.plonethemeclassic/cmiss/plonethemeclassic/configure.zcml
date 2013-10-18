@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="cmiss.plonethemeclassic">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include package="plonetheme.classic" />
+
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="CMISS Plone Classic Theme"
+        />
+
+    <include file="skins.zcml" />
+    <include file="profiles.zcml" />
+
+    <!--
+    <plone:static directory="static" type="theme" name="cmiss.plonethemeclassic" />
+    -->
+
+</configure>
