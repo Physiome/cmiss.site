@@ -1,5 +1,9 @@
+*.pyc
 .installed.cfg
 .mr.developer.cfg
+*.egg-info
 bin
 eggs
+develop-eggs
 parts
+var/*
