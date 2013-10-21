@@ -1,14 +1,21 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="cmiss.plonethemeclassic">
 
-   <cmf:registerDirectory
-       name="cmiss_custom_templates"/>
+    <cmf:registerDirectory
+        name="cmiss_custom_templates"/>
+ 
+    <!-- Note: This could also be done for all folders at once
+         by replacing the previous lines with this one:
+    <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
+    -->
 
-   <!-- Note: This could also be done for all folders at once
-        by replacing the previous lines with this one:
-   <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
-   -->
+  <browser:resourceDirectory
+      name="cmiss.plonethemeclassic.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IThemeSpecific"
+      />
 
 </configure>
